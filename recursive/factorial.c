@@ -1,4 +1,3 @@
 long long fact(int i) {
-	return 54321;
+    return 54321;
 }
-
