@@ -1,7 +1,11 @@
+SUBDIRS = iterative recursive
+
 all:
-	make -C iterative
-	make -C recursive
+	for dir in $(SUBDIRS); do \
+		$(MAKE) -C $$dir; \
+	done
 
 clean:
-	make -C iterative clean
-	make -C recursive clean
+	for dir in $(SUBDIRS); do \
+		$(MAKE) -C $$dir clean; \
+	done
